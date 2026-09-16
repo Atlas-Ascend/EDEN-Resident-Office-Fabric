@@ -1,0 +1,23 @@
+{
+  "schema": "OFFICE_FABRIC_GARI_INGESTION_CONTROL_PLANE_RECEIPT_V1",
+  "date": "2026-09-16",
+  "binding": "GA-OFFICE-GARI-CORPUS-INGESTION-001",
+  "status": "CONTROL_PLANE_RECEIPT_ACKNOWLEDGED",
+  "ingestion_id": "GARI-INGEST-9fd772c7bfd80747fd74",
+  "source_fingerprint": "326c5028ce9463e45d17b9fb3d2d9cfb9fd79f34a039fd530d3d61b08cb13927",
+  "program_binding": "GARI-RP-003",
+  "deliveries": [
+    {"delivery_id":"OFD-0ddb2aed2efd5e895b","destination":"gari.branch.GARI-Provenance","fabric":"OFFICE_FABRIC","resident_fabric":"EDEN_RESIDENT_OFFICE_FABRIC"},
+    {"delivery_id":"OFD-3896246419f31e196a","destination":"gari.branch.GARI-VERITAS","fabric":"OFFICE_FABRIC","resident_fabric":"EDEN_RESIDENT_OFFICE_FABRIC"},
+    {"delivery_id":"OFD-36a8c1134188f05556","destination":"gari.branch.LABCORE","fabric":"OFFICE_FABRIC","resident_fabric":"EDEN_RESIDENT_OFFICE_FABRIC"}
+  ],
+  "truth_boundary": {
+    "repository_control_plane_acknowledged": true,
+    "live_office_runtime_dispatch_claimed": false,
+    "resident_delivery_claimed": false,
+    "scientific_validation_claimed": false,
+    "public_baseline_mutated": false
+  },
+  "canonical_gari_receipt": "Atlas-Ascend/Ghost-Atlas-Research-Institute/EVIDENCE/GARI_OFFICE_INGESTION_CONTROL_PLANE_CANARY_20260916.json",
+  "promotion_gate": "Runtime promotion requires a live acknowledgement preserving ingestion_id, delivery_id and source_fingerprint."
+}
