@@ -1,0 +1,70 @@
+schema: ghost-atlas.office-fabric-gari-ingestion.v1
+binding_id: GA-OFFICE-GARI-CORPUS-INGESTION-001
+status: BOUND_CANDIDATE
+new_fabric: false
+new_organ: false
+
+office_fabric:
+  canonical_id: OFFICE_FABRIC
+  owner: JANUS / OFFICE FABRIC
+  resident_child:
+    canonical_id: EDEN_RESIDENT_OFFICE_FABRIC
+    owner: EDEN RESIDENT OFFICE
+
+intake_fabric:
+  canonical_id: INGESTION_FABRIC
+  owner: CROWNGRID / ROADBRIDGE / THOTH
+
+institution:
+  organ_id: GARI-INSTITUTE
+  repository: Atlas-Ascend/Ghost-Atlas-Research-Institute
+  contract: contracts/gari_office_ingestion_v1.yaml
+  capability: corpus ingestion, branch distribution, program-candidate routing and public-index staging
+
+accepted_event:
+  event_type: GARI_CORPUS_INGESTED
+  required_fields:
+    - ingestion_id
+    - item_id
+    - title
+    - source_fingerprint
+    - canonical_branch
+    - destination
+    - publication_visibility
+
+routing:
+  source: INGESTION_FABRIC
+  via:
+    - LABCORE
+    - THOTH
+    - GARI-Provenance
+    - GARI-PRIME
+  destination: OFFICE_FABRIC
+  resident_mirror: EDEN_RESIDENT_OFFICE_FABRIC
+  branch_address_pattern: gari.branch.<CANONICAL_BRANCH>
+
+research_handoffs:
+  question_candidates: GARI-RP-011
+  hypothesis_design: GARI-RP-012
+  program_compilation: GARI-RP-009
+  visualization: GARI CaseGraph Universal
+  execution_transport: Packet OS / Workforce Spine / CrownGrid
+
+public_release:
+  candidate_default: NOT_PUBLIC
+  living_index_updates: ALLOWED_WHEN_PUBLIC_SAFE
+  frozen_page_mutation: FORBIDDEN_WITHOUT_RELEASE_AUTHORIZATION
+
+truth_law:
+  - DISTRIBUTED != EXECUTED
+  - OFFICE_DELIVERY != SCIENTIFIC_VALIDATION
+  - PROGRAM_CANDIDATE != AUTHORIZED_PROGRAM
+  - PUBLIC_INDEX != PUBLICATION
+  - NEW_INGESTION != FROZEN_PAGE_MUTATION
+
+promotion_gate:
+  reciprocal_contract_in_gari: required
+  gari_tests: required
+  branch_address_is_canonical: required
+  source_fingerprint_present: required
+  promotion_allowed_by_binding: false
