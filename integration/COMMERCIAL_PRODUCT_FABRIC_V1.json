@@ -1,0 +1,590 @@
+{
+  "schema": "ghost-atlas.commercial-product-fabric.v1",
+  "catalog_id": "GA-COMMERCE-FABRIC-V1",
+  "mode": "CONVERGENCE_ONLY",
+  "canonical_owner": "OFFICE_FABRIC",
+  "commercial_system_of_record": "Stripe live catalog",
+  "resident": "VISHVARUPA-RESIDENT",
+  "law": "Every sellable offer has one primary office, all four office handoffs, explicit framework bindings, governed fulfillment, proof, settlement and Thoth return. No replacement sales runtime.",
+  "counts": {
+    "active_sellable_products": 37,
+    "direct_payment_ready": 1,
+    "scoped_quote_ready": 36
+  },
+  "offices": {
+    "GAC": {
+      "name": "Ghost Atlas Consulting",
+      "role": "client intake, qualification, scope, proposal/contract authority, executive delivery"
+    },
+    "AAS": {
+      "name": "Atlas Automated Systems",
+      "role": "automation, technical implementation, deployment and systems operations"
+    },
+    "GAR": {
+      "name": "Ghost Atlas Research",
+      "role": "research, evaluation, evidence, methods and reproducibility"
+    },
+    "GAI": {
+      "name": "Ghost Atlas Institute",
+      "role": "training, curriculum, documentation, publication and institutional knowledge transfer"
+    }
+  },
+  "common_routes": {
+    "intake": [
+      "WEBSITE/CLIENT_PORTAL",
+      "GAC",
+      "OFFICE_FABRIC",
+      "CROWNGRID",
+      "JANUS"
+    ],
+    "execution": [
+      "PACKET_OS",
+      "WORKFORCE_SPINE",
+      "PRIMARY_OFFICE",
+      "CROSS_OFFICE_OVERLAYS",
+      "EDEN"
+    ],
+    "assurance": [
+      "DEVOS",
+      "SECA",
+      "MEDUSA",
+      "PROOFGRID",
+      "THOTH"
+    ],
+    "settlement": [
+      "DELIVERY_ACCEPTANCE",
+      "STRIPE",
+      "PAYMENT/INVOICE_RECEIPT",
+      "THOTH"
+    ],
+    "tri_mode": "CREATOR"
+  },
+  "settlement_policies": {
+    "FIXED_LINK_VERIFIED_DELIVERY": {
+      "state": "LIVE_PAYMENT_READY",
+      "sequence": [
+        "SCOPE_ACCEPTED",
+        "EXECUTION",
+        "VERIFIED_PROOF",
+        "PAYMENT_LINK",
+        "PAYMENT",
+        "INVOICE/RECEIPT",
+        "THOTH"
+      ]
+    },
+    "SCOPED_QUOTE_INVOICE": {
+      "state": "LIVE_SCOPED_QUOTE_READY",
+      "sequence": [
+        "INTAKE",
+        "SCOPE",
+        "QUOTE",
+        "ACCEPTANCE",
+        "EXECUTION",
+        "VERIFIED_PROOF",
+        "STRIPE_INVOICE",
+        "PAYMENT",
+        "RECEIPT",
+        "THOTH"
+      ]
+    }
+  },
+  "products": [
+    {
+      "offer_id": "GAC-1A",
+      "name": "Strategic Signal Intensive",
+      "primary_office": "GAC",
+      "frameworks": [
+        "TRI_MODE",
+        "NAVI",
+        "SAGE",
+        "AURA",
+        "ODDEC"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAC-1B",
+      "name": "Systems Diagnostic",
+      "primary_office": "GAC",
+      "frameworks": [
+        "HF_CSoSA",
+        "HC_SoSA",
+        "CASEGRAPH",
+        "CAPABILITY_GENOME",
+        "SECA"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAC-1C",
+      "name": "Executive Operating Blueprint",
+      "primary_office": "GAC",
+      "frameworks": [
+        "HF_CSoSA",
+        "REALITY_OS",
+        "PACKET_OS",
+        "WORKFORCE_SPINE",
+        "PROOFGRID"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAC-2A",
+      "name": "AI Workflow Transformation",
+      "primary_office": "GAC",
+      "frameworks": [
+        "PACKET_OS",
+        "WORKFORCE_SPINE",
+        "METAFORGE",
+        "MEDUSA",
+        "SECA",
+        "PROOFGRID"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAC-2B",
+      "name": "Department Command Center",
+      "primary_office": "GAC",
+      "frameworks": [
+        "EDEN",
+        "VIBE",
+        "CROWNGRID",
+        "PACKET_OS",
+        "WORKFORCE_SPINE",
+        "PROOFGRID"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAC-2C",
+      "name": "Business Operating System",
+      "primary_office": "GAC",
+      "frameworks": [
+        "EDEN",
+        "VISHVARUPA",
+        "TRI_MODE",
+        "CROWNGRID",
+        "HYPERNET",
+        "THOTH",
+        "PROOFGRID"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAC-3A",
+      "name": "Systems Stewardship",
+      "primary_office": "GAC",
+      "frameworks": [
+        "VISHNU",
+        "OBSERVATORY",
+        "THOTH",
+        "DEVOS",
+        "SECA",
+        "MEDUSA"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAC-3B",
+      "name": "Fractional AI Operations Office",
+      "primary_office": "GAC",
+      "frameworks": [
+        "JANUS",
+        "ODIN",
+        "ATLAS_MIND",
+        "CROWNGRID",
+        "WORKFORCE_SPINE",
+        "MEDUSA"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAC-3C",
+      "name": "Embedded Transformation Office",
+      "primary_office": "GAC",
+      "frameworks": [
+        "OFFICE_FABRIC",
+        "EDEN",
+        "METAFORGE",
+        "THOTH",
+        "PROOFGRID",
+        "AEON"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAC-03-LITE",
+      "name": "GAC-03 Lite — Ghost Atlas Pilot",
+      "primary_office": "GAC",
+      "frameworks": [
+        "AUDIENCE_FORGE",
+        "GAC03",
+        "EDEN",
+        "PROOFGRID",
+        "THOTH",
+        "VISHVARUPA"
+      ],
+      "settlement_policy": "FIXED_LINK_VERIFIED_DELIVERY",
+      "stripe": {
+        "product_id": "prod_ghost_atlas_gac03_pilot",
+        "price_id": "price_1UMMDlCq0tzCTaT3ZBAGDy03",
+        "payment_link_id": "plink_1UMcVOCq0tzCTaT304a5wAbW",
+        "amount_usd": 5000
+      }
+    },
+    {
+      "offer_id": "AAS-1A",
+      "name": "Automation Signal Intensive",
+      "primary_office": "AAS",
+      "frameworks": [
+        "SAGE",
+        "AURA",
+        "ODDEC",
+        "CAPABILITY_GENOME",
+        "PACKET_OS"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "AAS-1B",
+      "name": "Automation Systems Diagnostic",
+      "primary_office": "AAS",
+      "frameworks": [
+        "HF_CSoSA",
+        "CAPABILITY_GENOME",
+        "CROWNGRID",
+        "PACKET_OS",
+        "SECA"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "AAS-1C",
+      "name": "Technical Operating Blueprint",
+      "primary_office": "AAS",
+      "frameworks": [
+        "HF_CSoSA",
+        "EDEN",
+        "CROWNGRID",
+        "PACKET_OS",
+        "WORKFORCE_SPINE"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "AAS-2A",
+      "name": "AI Workflow Automation System",
+      "primary_office": "AAS",
+      "frameworks": [
+        "PACKET_OS",
+        "WORKFORCE_SPINE",
+        "METAFORGE",
+        "EDEN",
+        "DEVOS",
+        "SECA",
+        "MEDUSA"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "AAS-2B",
+      "name": "Department Automation Command Center",
+      "primary_office": "AAS",
+      "frameworks": [
+        "VIBE",
+        "CROWNGRID",
+        "EDEN",
+        "PACKET_OS",
+        "WORKFORCE_SPINE",
+        "PROOFGRID"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "AAS-2C",
+      "name": "Enterprise Automation Operating System",
+      "primary_office": "AAS",
+      "frameworks": [
+        "VISHVARUPA",
+        "EDEN",
+        "HYPERNET",
+        "CROWNGRID",
+        "CAPABILITY_GENOME",
+        "PROOFGRID"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "AAS-3A",
+      "name": "Automation Systems Stewardship",
+      "primary_office": "AAS",
+      "frameworks": [
+        "VISHNU",
+        "OBSERVATORY",
+        "DEVOS",
+        "SECA",
+        "THOTH"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "AAS-3B",
+      "name": "Fractional Automation Operations Office",
+      "primary_office": "AAS",
+      "frameworks": [
+        "JANUS",
+        "CROWNGRID",
+        "WORKFORCE_SPINE",
+        "EDEN",
+        "DEVOS"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "AAS-3C",
+      "name": "Embedded Automation Systems Office",
+      "primary_office": "AAS",
+      "frameworks": [
+        "OFFICE_FABRIC",
+        "VISHVARUPA",
+        "EDEN",
+        "METAFORGE",
+        "PROOFGRID"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAR-1A",
+      "name": "Research Question Intensive",
+      "primary_office": "GAR",
+      "frameworks": [
+        "GARI",
+        "RESEARCH_CANON",
+        "CORTHALIS",
+        "THOTH",
+        "MAAT"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAR-1B",
+      "name": "Evidence and Source Diagnostic",
+      "primary_office": "GAR",
+      "frameworks": [
+        "THOTH",
+        "CASEGRAPH",
+        "PROOFGRID",
+        "MAAT",
+        "SECA"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAR-1C",
+      "name": "Applied Research Blueprint",
+      "primary_office": "GAR",
+      "frameworks": [
+        "GARI",
+        "PACKET_OS",
+        "WORKFORCE_SPINE",
+        "PROOFGRID",
+        "THOTH"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAR-2A",
+      "name": "AI and Systems Evaluation",
+      "primary_office": "GAR",
+      "frameworks": [
+        "GARI",
+        "SECA",
+        "DEVOS",
+        "PROOFGRID",
+        "ATLAS_MIND"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAR-2B",
+      "name": "Research Knowledge Workspace",
+      "primary_office": "GAR",
+      "frameworks": [
+        "THOTH",
+        "GARI",
+        "CASEGRAPH",
+        "CROWNGRID",
+        "PROOFGRID"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAR-2C",
+      "name": "Research Program Integration",
+      "primary_office": "GAR",
+      "frameworks": [
+        "GARI",
+        "PACKET_OS",
+        "WORKFORCE_SPINE",
+        "CROWNGRID",
+        "THOTH"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAR-3A",
+      "name": "Research Stewardship",
+      "primary_office": "GAR",
+      "frameworks": [
+        "THOTH",
+        "MAAT",
+        "SECA",
+        "PROOFGRID",
+        "AEON"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAR-3B",
+      "name": "Fractional Research Office",
+      "primary_office": "GAR",
+      "frameworks": [
+        "GARI",
+        "OFFICE_FABRIC",
+        "WORKFORCE_SPINE",
+        "SERVERFORGE",
+        "THOTH"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAR-3C",
+      "name": "Embedded Research Program",
+      "primary_office": "GAR",
+      "frameworks": [
+        "GARI",
+        "VISHVARUPA",
+        "OFFICE_FABRIC",
+        "PACKET_OS",
+        "PROOFGRID",
+        "THOTH"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAI-1A",
+      "name": "Institutional Knowledge Intensive",
+      "primary_office": "GAI",
+      "frameworks": [
+        "THOTH",
+        "HC_SoSA",
+        "CORTHALIS",
+        "CAPABILITY_GENOME"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAI-1B",
+      "name": "Curriculum and Publication Diagnostic",
+      "primary_office": "GAI",
+      "frameworks": [
+        "GARI",
+        "THOTH",
+        "PROOFGRID",
+        "MAAT"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAI-1C",
+      "name": "Institutional Knowledge Blueprint",
+      "primary_office": "GAI",
+      "frameworks": [
+        "CORTHALIS",
+        "THOTH",
+        "CAPABILITY_GENOME",
+        "HC_SoSA"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAI-2A",
+      "name": "Operator Training and Knowledge Transfer",
+      "primary_office": "GAI",
+      "frameworks": [
+        "HUMAN_RUNTIME",
+        "TRI_MODE",
+        "PROMPT_OS",
+        "PACKET_OS",
+        "SEVEN",
+        "ALI_9"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAI-2B",
+      "name": "Publication and Methods Package",
+      "primary_office": "GAI",
+      "frameworks": [
+        "GARI",
+        "RESEARCH_CANON",
+        "PROOFGRID",
+        "MEDUSA",
+        "THOTH"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAI-2C",
+      "name": "Institutional Knowledge Integration",
+      "primary_office": "GAI",
+      "frameworks": [
+        "THOTH",
+        "CASEGRAPH",
+        "CROWNGRID",
+        "SERVERFORGE",
+        "PROOFGRID"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAI-3A",
+      "name": "Knowledge and Curriculum Stewardship",
+      "primary_office": "GAI",
+      "frameworks": [
+        "THOTH",
+        "SESHAT",
+        "PROOFGRID",
+        "AEON"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAI-3B",
+      "name": "Fractional Education and Publication Office",
+      "primary_office": "GAI",
+      "frameworks": [
+        "GARI",
+        "CONTENT_ENGINE",
+        "SERVERFORGE",
+        "PROOFGRID",
+        "THOTH"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    },
+    {
+      "offer_id": "GAI-3C",
+      "name": "Embedded Institutional Knowledge Office",
+      "primary_office": "GAI",
+      "frameworks": [
+        "OFFICE_FABRIC",
+        "GARI",
+        "THOTH",
+        "AUDIENCE_FORGE",
+        "PROOFGRID"
+      ],
+      "settlement_policy": "SCOPED_QUOTE_INVOICE"
+    }
+  ]
+}
