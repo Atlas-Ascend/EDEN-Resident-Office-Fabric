@@ -5,7 +5,7 @@
   "canonical_owner": "OFFICE_FABRIC",
   "commercial_system_of_record": "Stripe live catalog",
   "resident": "VISHVARUPA-RESIDENT",
-  "law": "Every sellable offer has one primary office, all four office handoffs, explicit framework bindings, governed fulfillment, proof, settlement and Thoth return. No replacement sales runtime.",
+  "law": "Every sellable offer has one primary office, all four office handoffs, explicit framework bindings, governed fulfillment, proof, settlement and Thoth return. No replacement sales runtime. Archangel Michael is the fifth and terminal office for all billable settlement and release decisions.",
   "counts": {
     "active_sellable_products": 37,
     "direct_payment_ready": 1,
@@ -27,6 +27,11 @@
     "GAI": {
       "name": "Ghost Atlas Institute",
       "role": "training, curriculum, documentation, publication and institutional knowledge transfer"
+    },
+    "AM": {
+      "name": "Archangel Michael — Judgment & Settlement Office",
+      "role": "terminal cross-office gate: proof judgment, lawful billing authorization, invoice reconciliation, Stripe verified settlement, dispute routing, release and Thoth archival",
+      "position": 5
     }
   },
   "common_routes": {
@@ -53,11 +58,26 @@
     ],
     "settlement": [
       "DELIVERY_ACCEPTANCE",
+      "ARCHANGEL_MICHAEL",
       "STRIPE",
-      "PAYMENT/INVOICE_RECEIPT",
+      "VERIFIED_PAYMENT/INVOICE_RECEIPT",
+      "ARCHANGEL_MICHAEL_RECONCILIATION",
       "THOTH"
     ],
-    "tri_mode": "CREATOR"
+    "tri_mode": "CREATOR",
+    "judgment": [
+      "GAC",
+      "AAS",
+      "GAR",
+      "GAI",
+      "DEVOS",
+      "SECA",
+      "MEDUSA",
+      "PROOFGRID",
+      "ARCHANGEL_MICHAEL",
+      "STRIPE",
+      "THOTH"
+    ]
   },
   "settlement_policies": {
     "FIXED_LINK_VERIFIED_DELIVERY": {
@@ -66,9 +86,11 @@
         "SCOPE_ACCEPTED",
         "EXECUTION",
         "VERIFIED_PROOF",
+        "ARCHANGEL_MICHAEL_JUDGMENT",
         "PAYMENT_LINK",
         "PAYMENT",
         "INVOICE/RECEIPT",
+        "ARCHANGEL_MICHAEL_RECONCILIATION",
         "THOTH"
       ]
     },
@@ -81,9 +103,11 @@
         "ACCEPTANCE",
         "EXECUTION",
         "VERIFIED_PROOF",
+        "ARCHANGEL_MICHAEL_JUDGMENT",
         "STRIPE_INVOICE",
         "PAYMENT",
         "RECEIPT",
+        "ARCHANGEL_MICHAEL_RECONCILIATION",
         "THOTH"
       ]
     }
@@ -586,5 +610,36 @@
       ],
       "settlement_policy": "SCOPED_QUOTE_INVOICE"
     }
-  ]
+  ],
+  "judgment_office": {
+    "id": "ARCHANGEL_MICHAEL",
+    "terminal_office": true,
+    "applies_to": "ALL_37_OFFERS_AND_CROSS_OFFICE_HANDOFFS",
+    "guards": [
+      "verified_delivery_proof",
+      "accepted_scope_and_amount",
+      "invoice_correlation",
+      "no_duplicate_invoice",
+      "stripe_event_signature_verification",
+      "verified_settlement_or_pending",
+      "refund_and_dispute_handling",
+      "immutable_proof_receipt"
+    ],
+    "states": [
+      "PENDING_JUDGMENT",
+      "EVIDENCE_INCOMPLETE",
+      "INVOICE_AUTHORIZED",
+      "AWAITING_STRIPE_PAYMENT",
+      "SETTLED_VERIFIED",
+      "DISPUTED",
+      "RECONCILED_ARCHIVED"
+    ],
+    "rules": [
+      "No payment is declared successful before authoritative Stripe confirmation",
+      "8.8B replay packets are evaluation ledger entries, not billable customers or real invoices",
+      "Customer invoices require a legitimate accepted scope and independently authorized amount",
+      "No office may bypass Michael for commercial release",
+      "Michael records judgment evidence and forwards actual payment operations to existing Stripe adapter"
+    ]
+  }
 }
